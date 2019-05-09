@@ -8,7 +8,9 @@ namespace fibonacci.test
         [InlineData(1, 1)]
         [InlineData(2, 1)]
         [InlineData(3, 2)]
-
+        [InlineData(10, 55)]
+        [InlineData(11, 89)]
+        [InlineData(12, 144)]
         public void ShouldReturnFibonacciNumberIfGiveAItemNumber(int itemNumber, int expected)
         {
             var fibonacci = new Fibonacci();
