@@ -4,13 +4,15 @@ namespace fibonacci.test
 {
     public class Test
     {
-        [Fact]
-        public void ShouldReturn1IfGiveAItemNumber1()
+        [Theory]
+        [InlineData(1, 1)]
+        [InlineData(2, 1)]
+        public void ShouldReturn1IfGiveAItemNumber1(int itemNumber, int expected)
         {
             var fibonacci = new Fibonacci();
-            var number = fibonacci.getNumber(1);
+            var number = fibonacci.getNumber(itemNumber);
             
-            Assert.Equal(number, 1);
+            Assert.Equal(expected, number);
         }
     }
 }
