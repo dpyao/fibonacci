@@ -1,14 +1,16 @@
-﻿using System;
-using Xunit;
+﻿using Xunit;
 
 namespace fibonacci.test
 {
-    public class Tests
+    public class Test
     {
         [Fact]
-        public void Test1()
+        public void ShouldReturn1IfGiveAItemNumber1()
         {
-            Assert.True(true);
+            var fibonacci = new Fibonacci();
+            var number = fibonacci.getNumber(1);
+            
+            Assert.Equal(number, 1);
         }
     }
 }
