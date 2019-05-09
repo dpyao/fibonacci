@@ -11,7 +11,8 @@ namespace fibonacci.test
         [InlineData(10, 55)]
         [InlineData(11, 89)]
         [InlineData(12, 144)]
-        public void ShouldReturnFibonacciNumberIfGiveAItemNumber(int itemNumber, int expected)
+        [InlineData(12, 144)]
+        public void ShouldReturnFibonacciNumberIfGiveAItemNumber(int itemNumber, long expected)
         {
             var fibonacci = new Fibonacci();
             var number = fibonacci.GetNumber(itemNumber);

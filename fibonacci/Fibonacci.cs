@@ -1,9 +1,11 @@
+using System.Globalization;
+
 namespace fibonacci
 {
     public class Fibonacci
     {
 
-        private static int Recursive(int i)
+        private static long Recursive(int i)
         {
             switch (i)
             {
@@ -17,7 +19,7 @@ namespace fibonacci
             }
         }
 
-        public int GetNumber(int i)
+        public long GetNumber(int i)
         { 
             return Recursive(i);
         }
