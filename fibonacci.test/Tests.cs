@@ -7,10 +7,12 @@ namespace fibonacci.test
         [Theory]
         [InlineData(1, 1)]
         [InlineData(2, 1)]
-        public void ShouldReturn1IfGiveAItemNumber1(int itemNumber, int expected)
+        [InlineData(3, 2)]
+
+        public void ShouldReturnFibonacciNumberIfGiveAItemNumber(int itemNumber, int expected)
         {
             var fibonacci = new Fibonacci();
-            var number = fibonacci.getNumber(itemNumber);
+            var number = fibonacci.GetNumber(itemNumber);
             
             Assert.Equal(expected, number);
         }

@@ -2,9 +2,24 @@ namespace fibonacci
 {
     public class Fibonacci
     {
-        public int getNumber(int i)
+
+        private static int Recursive(int i)
         {
-            return 1;
+            switch (i)
+            {
+                case 0:
+                    return 0;
+                case 1:
+                case 2:
+                    return 1;
+                default:
+                    return Recursive(i-1) + Recursive(i-2);
+            }
+        }
+
+        public int GetNumber(int i)
+        { 
+            return Recursive(i);
         }
     }
 }
